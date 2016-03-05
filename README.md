@@ -5,7 +5,6 @@
 [![Code Climate](https://codeclimate.com/github/sensu-plugins/sensu-plugins-telapi/badges/gpa.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-telapi)
 [![Test Coverage](https://codeclimate.com/github/sensu-plugins/sensu-plugins-telapi/badges/coverage.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-telapi)
 [![Dependency Status](https://gemnasium.com/sensu-plugins/sensu-plugins-telapi.svg)](https://gemnasium.com/sensu-plugins/sensu-plugins-telapi)
-[ ![Codeship Status for sensu-plugins/sensu-plugins-telapi](https://codeship.com/projects/562de4e0-d5b3-0132-348c-26dfd4cc1a97/status?branch=master)](https://codeship.com/projects/78146)
 
 ## Functionality
 

@@ -1,19 +1,33 @@
 language: ruby
 cache:
-  - bundler
+- bundler
 install:
-  - bundle install
+- bundle install
 rvm:
-  - 1.9.3
-  - 2.0
-  - 2.1
-  - 2.2
+- 1.9.3
+- 2.0
+- 2.1
+- 2.2
 notifications:
   email:
     recipients:
-      - sensu-plugin@sensu-plugins.io
+    - sensu-plugin@sensu-plugins.io
     on_success: change
     on_failure: always
-
 script:
-  - 'bundle exec rake default'
+- bundle exec rake default
+- gem build sensu-plugins-telapi.gemspec
+- gem install sensu-plugins-telapi-*.gem
+deploy:
+  provider: rubygems
+  api_key:
+    secure: keeaz6uS7pXYatNYp/zjCygNhR94wI9svkVgcdnQTwAs8OrbJQdgJ1tCa/CTJ489wcvQkTK1eIsILYsto+UHxJ9MybpC33dr/V25ZBrE18x4m0M3yA3uku0ttIWmFnXio2FmsF5B2wZFax1JQ1bRdJ1L15ab5zzuIH0eovgiM/g=
+  gem: sensu-plugins-telapi
+  on:
+    ags: true
+    all_branches: true
+    rvm: 1.9.3
+    rvm: 2.0
+    rvm: 2.1
+    rvm: 2.2
+    repo: sensu-plugins/sensu-plugins-telapi
